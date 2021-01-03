@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+    background-color: wheat;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#ana-frame, #bilgiler{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #003366;
+}
+
+#alt-baslik{
+    font-style: italic;
+}
+
+#baslangic{
+    border-width: 2px;
+    border-color: transparent;
+    border-radius: 30px;
+    width: 90px;
+    height: 50px;
+}
+
+#bilgiler{
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    color: #003366;
+}

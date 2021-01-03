@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@800&display=swap');
+
+html,body{
+    margin:0;
+    padding: 0;
+}
+
+body{
+   overflow: hidden;
+   background-color: wheat;
+}
+
+#geri{
+    margin-left: 5px;
+    font-family: 'Mukta', sans-serif;
+    position: absolute;
+    width: 5%;
+    height: 5%;
+    font-size: 150%;
+    background-color: transparent;
+    color: wheat;
+    border-color: transparent;
+    transition: 0.25s all;
+    z-index: 10;
+    display: inline-block;
+}
+
+#sol-bar, #sag-bar{
+    width: 12px;
+    height: 85px;
+    position: relative;
+    background-color: #144955;
+    border-radius: 25px;
+}
+
+#sag-bar{
+    float: right;
+}
+
+#sol-bar{
+    float: left;
+}
+
+#top{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color:#F14C38;
+}
+
+#ayrac,#puanSol,#puanSag{
+    font-size: 1000%;
+    font-family: 'Mukta', sans-serif;
+    color: wheat;
+    z-index: 10;
+    transition: 1.25s all;
+    display: inline-block;
+}

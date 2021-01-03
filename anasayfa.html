@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ping-Pong game with JS</title>
+        <link rel="stylesheet" href="anasayfa.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" type="text/css">
+    </head>
+    <body>
+        <div id="ana-frame">
+            <h1
+            class="animate__animated animate__backInLeft"
+            id = "ust-baslik">Ping Pong oyununa hoşgeldiniz!</h1>
+            <h2
+            class="animate__animated animate__backInRight"
+            id = "alt-baslik">Başlamak için, alttaki butona basınız.</h2>
+            <button class="animate__animated animate__backInDown" id = "baslangic" onclick="oyunagit()">Başla!</button>
+            <button class="animate__animated animate__backInDown" id = "baslangic" onclick="sonuclaragit()">Son Sonuç</button>
+            <div id="kontroller">
+                <li id="kontroller-text"> 1. Oyuncu, "W" ve "S" tuşları ile,</li>
+                <li id="kontroller-text"> 2. Oyuncu, "Yukarı" ve "Aşağı" tuşları ile</li>
+                <h3 id="bitis-text"> oynayabilir.</h3>
+            </div>
+        </div>
+    </body>
+    <script>
+        function oyunagit(){
+            window.location.href = "./oyun.html";
+        }
+        function sonuclaragit() {
+            window.location.href = "./sonuc.html";
+        }
+        $('#baslangic').mouseenter(
+       function(){ $(this).addClass('animate__bounce') },
+       function(){ $(this).removeClass('animate__bounce') }
+        );
+    </script>
+</html>

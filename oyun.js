@@ -1,4 +1,5 @@
 var hizOyuncu = 15;
+var ses = new Audio("./pong.mp3");
 var xHizi = 3;
 var yHizi = 1;
 var oyunHizi = 1; //Tavsiye edilen aralık : 1-10
@@ -24,6 +25,11 @@ onkeydown = onkeyup = function(e) {//key'e basma handle'ı
     e = e || event;
     map[e.keyCode] = e.type == 'keydown';
 }
+
+window.addEventListener("load", function(){
+    sagBar.style.top = Number(sagBar.style.height)+yukseklik/3 + "px";
+    solBar.style.top = Number(sagBar.style.height)+yukseklik/3 + "px";
+});
 
 geri.onclick = function(){
     document.location.href="./anasayfa.html";
@@ -76,6 +82,7 @@ function topHareket() {//Topun hareket kuralları
     if (pxToNum(topOyun.style.left) >= genislik - 30) {
         if (pxToNum(sagBar.style.top) <= pxToNum(topOyun.style.top) + 20 && pxToNum(sagBar.style.top) + 85 >= pxToNum(topOyun.style.top)) {
             xHizi *= -1;
+            ses.play();
         } else if (pxToNum(topOyun.style.left) >= genislik - 20)
             puanTablosu('sol');
     }
@@ -83,6 +90,7 @@ function topHareket() {//Topun hareket kuralları
     if (pxToNum(topOyun.style.left) <= 12) {
         if (pxToNum(solBar.style.top) <= pxToNum(topOyun.style.top) + 20 && pxToNum(solBar.style.top) + 85 >= pxToNum(topOyun.style.top)) {
             xHizi *= -1;
+            ses.play();
         } else if (pxToNum(topOyun.style.left) <= 0)
             puanTablosu('sag');
     }
@@ -119,7 +127,7 @@ function puanKontrol() {//Maç kazananın handle'ı
         "\nSağ Taraf : "+puanSag.innerHTML);
 
         var sonuc = [{"skor":puanSag.innerHTML+" - "+puanSol.innerHTML,
-        "kazanan":"Sag Taraf"}];
+        "kazanan":"Sağ Taraf"}];
         localStorage.setItem("sonuc", JSON.stringify(sonuc));
     }
 

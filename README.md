@@ -9,6 +9,6 @@
 
 - First player can play with "**W**" and "**S**"
 - Second player can play with **Up** and **Down Arrow**
-- 
+
 ## Try the demo
 - https://purejs-ping-pong.herokuapp.com
